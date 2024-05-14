@@ -3,9 +3,10 @@ import playGameCalc from "./brain-calc.js";
 import playGameGcd from "./brain-gcd.js";
 import readlineSync from "readline-sync";
 import playGameProgression from "./brain-progression.js";
+import playGamePrime from "./brain-prime.js";
 
 function selectGame(){
-    let numberGame = readlineSync.question("What game do you want to play?\n1: even\n2: calc\n3: gcd\n4: progression\n")
+    let numberGame = readlineSync.question("What game do you want to play?\n1: even\n2: calc\n3: gcd\n4: progression\n5: prime\n")
     switch (numberGame) {
         case "1":
             playGameParity()
@@ -18,6 +19,9 @@ function selectGame(){
             break;
         case "4":
             playGameProgression()
+            break;
+        case "5":
+            playGamePrime()
             break;
         default:
             console.log("Error: game is not found")
