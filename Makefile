@@ -3,7 +3,7 @@ install:
 	npm ci
 
 brain-games:
-	node bin/brain-games.js
+	node src/index.js
 
 lint:
 	npx eslint

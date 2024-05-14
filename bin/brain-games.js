@@ -1,11 +1,26 @@
-import getName from '../src/cli.js';
 import playGameParity from '../bin/brain-even.js'
+import playGameCalc from "./brain-calc.js";
+import readlineSync from "readline-sync";
 
-console.log("Welcome to the Brain Games!")
+function selectGame(){
+    let numberGame = readlineSync.question("What game do you want to play?\n1: even\n2: calc\n")
+    switch (numberGame) {
+        case "1":
+            playGameParity()
+            break;
+        case "2":
+            playGameCalc()
+            break;
+        default:
+            console.log("Error: game is not found")
+    }
+}
 
-const name = getName();
+export default selectGame
 
-console.log(`Hello, ${name}!`)
 
-playGameParity();
+
+
+
+
 
